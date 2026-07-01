@@ -1,0 +1,24 @@
+name: 'sunhouse_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'sunhouse_dbt'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  sunhouse_dbt:
+    silver:
+      +materialized: table
+      +database: iceberg
+      +schema: user27
+    gold:
+      +materialized: table
+      +database: iceberg
+      +schema: user27

@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: hive
+    schema: sunhouse
+    tables:
+      - name: raw_payments
+      - name: raw_coin_change
+      - name: raw_check_in
+      - name: raw_updates
+      - name: raw_flight_booking
+      - name: raw_flight_schedule
+      - name: raw_flights
