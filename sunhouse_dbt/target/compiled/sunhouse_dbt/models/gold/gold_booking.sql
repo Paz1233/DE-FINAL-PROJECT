@@ -1,18 +1,9 @@
-{{ config(
-    materialized='incremental',
-    incremental_strategy='merge',
-    unique_key='booking_id',
-    catalog='iceberg',
-    schema='sunhouse',
-    properties={
-        'location': "'abfs://warehouse@dataengineering2025sa.dfs.core.windows.net/SunHouse/Gold/bookings/'"
-    }
-) }}
+
 
 WITH booking AS (
 
     SELECT *
-    FROM {{ ref('silver_flight_booking') }}
+    FROM "iceberg"."sunhouse"."silver_flight_booking"
 
 ),
 
@@ -21,7 +12,7 @@ checkin AS (
     SELECT
         CAST(booking_id AS INTEGER) AS booking_id,
         check_in_date
-    FROM {{ ref('silver_check_in') }}
+    FROM "iceberg"."sunhouse"."silver_check_in"
 
 ),
 
@@ -31,7 +22,7 @@ rates AS (
         change_date,
         currency_type,
         coin_value
-    FROM {{ ref('silver_coin_change') }}
+    FROM "iceberg"."sunhouse"."silver_coin_change"
 
 ),
 
@@ -40,7 +31,7 @@ payments AS (
     SELECT
         booking_id,
         COUNT(*) AS num_of_payments
-    FROM {{ ref('silver_payments') }}
+    FROM "iceberg"."sunhouse"."silver_payments"
     GROUP BY booking_id
 
 )
@@ -90,15 +81,6 @@ LEFT JOIN rates r
 LEFT JOIN payments p
     ON p.booking_id = b.booking_id
 
-LEFT JOIN {{ ref('gold_flights') }} f
+LEFT JOIN "iceberg"."sunhouse"."gold_flights" f
     ON b.flight_id = f.flight_id
 
-{% if is_incremental() %}
-
-WHERE b.booking_date >
-(
-    SELECT max(booking_date)
-    FROM {{ this }}
-)
-
-{% endif %}
