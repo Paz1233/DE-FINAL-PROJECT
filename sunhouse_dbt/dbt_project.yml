@@ -14,11 +14,11 @@ clean-targets:
 
 models:
   sunhouse_dbt:
-    silver:
-      +materialized: table
-      +database: iceberg
-      +schema: user27
-    gold:
-      +materialized: table
-      +database: iceberg
-      +schema: user27
+    # silver:
+    #   +materialized: table
+    #   +database: iceberg
+    #   +schema: user27
+    # gold:
+    #   +materialized: table
+    #   +database: iceberg
+    #   +schema: user27

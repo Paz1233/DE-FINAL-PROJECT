@@ -58,14 +58,25 @@ surrogate_key_generation AS (
     FROM clean_bronze
     -- Drop rows where the departure date was corrupt beyond repair
     WHERE clean_departure_date IS NOT NULL 
+),
+
+payment_currency AS (
+    SELECT
+        booking_id,
+        arbitrary(currency) AS currency
+    FROM {{ ref('silver_payments') }}
+    GROUP BY booking_id
 )
 
 SELECT
-    booking_id,
-    user_id,
-    flight_id,
-    destination,
-    passenger_count,
-    price,
-    booking_date
-FROM surrogate_key_generation
+    b.booking_id,
+    b.user_id,
+    b.flight_id,
+    b.destination,
+    b.passenger_count,
+    b.price,
+    b.booking_date,
+    p.currency AS currency_type
+FROM surrogate_key_generation b
+LEFT JOIN payment_currency p
+    ON b.booking_id = p.booking_id

@@ -86,3 +86,18 @@ WITH (
     format = 'PARQUET',
     external_location = 'abfs://warehouse@dataengineering2025sa.dfs.core.windows.net/SunHouse/Bronze/flight-schedule/'
 );
+
+CREATE TABLE hive.sunhouse.raw_flights (
+    date VARCHAR,
+    number VARCHAR,
+    departure VARCHAR,
+    total_seats VARCHAR,
+    fuel_consumption VARCHAR,
+    fuel_price_per_liter VARCHAR,
+    crew_members varchar
+)
+WITH (
+    format = 'CSV',
+    skip_header_line_count = 1 ,
+    external_location = 'abfs://warehouse@dataengineering2025sa.dfs.core.windows.net/SunHouse/Bronze/flights/'
+);

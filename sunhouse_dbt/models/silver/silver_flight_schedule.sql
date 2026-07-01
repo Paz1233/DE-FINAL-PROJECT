@@ -92,11 +92,5 @@ surrogate_key_generation AS (
     FROM clean_bronze
 )
 
-SELECT
-    flight_id,
-    flight_number,
-    departure_airport,
-    destination_airport,
-    airline_name,
-    departure_date
+SELECT DISTINCT * 
 FROM surrogate_key_generation
