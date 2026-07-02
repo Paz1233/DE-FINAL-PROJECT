@@ -21,6 +21,7 @@ checkin AS (
         CAST(booking_id AS INTEGER) AS booking_id,
         check_in_date
     FROM "iceberg"."sunhouse"."silver_check_in"
+    GROUP BY booking_id, check_in_date
 
 ),
 

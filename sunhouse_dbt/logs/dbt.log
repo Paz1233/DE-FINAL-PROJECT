@@ -14575,3 +14575,892 @@ LEFT JOIN "iceberg"."sunhouse"."gold_flights" f
 [0m18:23:38.578260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6236BFA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C62B916890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C62B945510>]}
 [0m18:23:38.578260 [debug] [MainThread]: Flushing usage events
 [0m18:23:39.550005 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:42:10.073798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC66EA150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC66EBC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC67BA990>]}
+
+
+============================== 09:42:10.089813 | 94dbcb75-286a-45db-9c3a-102456893f07 ==============================
+[0m09:42:10.089813 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m09:42:10.089813 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\DE21\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run --select gold_booking', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DE21\\Desktop\\DE-FINAL-PROJECT\\sunhouse_dbt\\logs'}
+[0m09:42:10.387745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6ABF6D0>]}
+[0m09:42:10.499401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC1A577D0>]}
+[0m09:42:10.499401 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m09:42:10.949834 [debug] [MainThread]: checksum: 2f9eaaaab82deb131a4cd1ce538265daf51f0dc525c4f377bb019f1fe63144fc, vars: {}, profile: sunhouse_dbt, target: dev, version: 1.12.0b3
+[0m09:42:12.232123 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:42:12.232123 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m09:42:12.232123 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:42:12.269620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6B02F10>]}
+[0m09:42:12.345461 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m09:42:12.361447 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m09:42:12.379145 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m09:42:12.409068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6D8F910>]}
+[0m09:42:12.409068 [info ] [MainThread]: Found 12 models, 7 sources, 505 macros
+[0m09:42:12.409068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6D7F890>]}
+[0m09:42:12.409068 [info ] [MainThread]: 
+[0m09:42:12.409068 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:42:12.409068 [info ] [MainThread]: 
+[0m09:42:12.409068 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m09:42:12.409068 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m09:42:15.010182 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m09:42:15.010182 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m09:42:15.010182 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:42:15.010182 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m09:42:15.010182 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6E694D0>]}
+[0m09:42:15.574909 [debug] [ThreadPool]: SQL status: SUCCESS in 0.568 seconds
+[0m09:42:15.574909 [debug] [ThreadPool]: On list_iceberg: Close
+[0m09:42:15.583940 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_sunhouse'
+[0m09:42:15.590987 [debug] [ThreadPool]: Using trino connection "list_iceberg_sunhouse"
+[0m09:42:15.590987 [debug] [ThreadPool]: On list_iceberg_sunhouse: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg_sunhouse"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'sunhouse') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'sunhouse'
+[0m09:42:15.590987 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:42:16.140082 [debug] [ThreadPool]: SQL status: SUCCESS in 0.551 seconds
+[0m09:42:16.140082 [debug] [ThreadPool]: On list_iceberg_sunhouse: ROLLBACK
+[0m09:42:16.140082 [debug] [ThreadPool]: On list_iceberg_sunhouse: Close
+[0m09:42:16.155833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6924090>]}
+[0m09:42:16.155833 [debug] [MainThread]: On master: COMMIT
+[0m09:42:16.171693 [debug] [Thread-1 (]: Began running node model.sunhouse_dbt.gold_booking
+[0m09:42:16.171693 [info ] [Thread-1 (]: 1 of 1 START sql incremental model iceberg.sunhouse.gold_booking ............... [RUN]
+[0m09:42:16.171693 [debug] [Thread-1 (]: Acquiring new trino connection 'model.sunhouse_dbt.gold_booking'
+[0m09:42:16.171693 [debug] [Thread-1 (]: Began compiling node model.sunhouse_dbt.gold_booking
+[0m09:42:16.190029 [debug] [Thread-1 (]: Writing injected SQL for node "model.sunhouse_dbt.gold_booking"
+[0m09:42:16.192004 [debug] [Thread-1 (]: Began executing node model.sunhouse_dbt.gold_booking
+[0m09:42:16.246044 [debug] [Thread-1 (]: Writing runtime sql for node "model.sunhouse_dbt.gold_booking"
+[0m09:42:16.246044 [debug] [Thread-1 (]: Using trino connection "model.sunhouse_dbt.gold_booking"
+[0m09:42:16.246044 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "node_id": "model.sunhouse_dbt.gold_booking"} */
+
+  
+    
+
+    create table "iceberg"."sunhouse"."gold_booking"
+      
+      WITH (location = 'abfs://warehouse@dataengineering2025sa.dfs.core.windows.net/SunHouse/Gold/bookings/')
+    as (
+      
+
+WITH booking AS (
+
+    SELECT *
+    FROM "iceberg"."sunhouse"."silver_flight_booking"
+
+),
+
+checkin AS (
+
+    SELECT
+        CAST(booking_id AS INTEGER) AS booking_id,
+        check_in_date
+    FROM "iceberg"."sunhouse"."silver_check_in"
+
+),
+
+rates AS (
+
+    SELECT
+        change_date,
+        currency_type,
+        coin_value
+    FROM "iceberg"."sunhouse"."silver_coin_change"
+
+),
+
+payments AS (
+
+    SELECT
+        booking_id,
+        COUNT(*) AS num_of_payments
+    FROM "iceberg"."sunhouse"."silver_payments"
+    GROUP BY booking_id
+
+)
+
+SELECT
+
+    b.booking_id,
+    b.user_id,
+    b.flight_id,
+    b.passenger_count,
+    b.currency_type as original_currency_type,
+
+    b.booking_date,
+
+    c.check_in_date,
+
+    ROUND(
+        b.price * COALESCE(r.coin_value,1),
+        2
+    ) AS flight_price_ils,
+
+    COALESCE(p.num_of_payments,0) AS num_of_payments,
+
+    date_diff(
+        'minute',
+        c.check_in_date,
+        f.departure_date
+    ) AS checkin_to_departure_minutes,
+
+    date_diff(
+        'hour',
+        b.booking_date,
+        c.check_in_date
+    ) AS from_booking_to_check_in_hours,
+
+    f.destination_airport as destination
+
+FROM booking b
+
+LEFT JOIN checkin c
+    ON b.booking_id = c.booking_id
+
+LEFT JOIN rates r
+    ON r.currency_type = b.currency_type
+   AND r.change_date = CAST(b.booking_date AS DATE)
+
+LEFT JOIN payments p
+    ON p.booking_id = b.booking_id
+
+LEFT JOIN "iceberg"."sunhouse"."gold_flights" f
+    ON b.flight_id = f.flight_id
+
+
+    )
+[0m09:42:16.246044 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:42:17.726025 [debug] [Thread-1 (]: SQL status: CREATE TABLE (2_635 rows) in 1.476 seconds
+[0m09:42:17.726025 [debug] [Thread-1 (]: Applying DROP to: "iceberg"."sunhouse"."gold_booking__dbt_tmp"
+[0m09:42:17.726025 [debug] [Thread-1 (]: Using trino connection "model.sunhouse_dbt.gold_booking"
+[0m09:42:17.726025 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "node_id": "model.sunhouse_dbt.gold_booking"} */
+
+    drop view if exists "iceberg"."sunhouse"."gold_booking__dbt_tmp"
+[0m09:42:18.062844 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.331 seconds
+[0m09:42:18.078946 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: ROLLBACK
+[0m09:42:18.078946 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: Close
+[0m09:42:18.078946 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '94dbcb75-286a-45db-9c3a-102456893f07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6A29690>]}
+[0m09:42:18.078946 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model iceberg.sunhouse.gold_booking .......... [[32mCREATE TABLE (2_635 rows)[0m in 1.91s]
+[0m09:42:18.078946 [debug] [Thread-1 (]: Finished running node model.sunhouse_dbt.gold_booking
+[0m09:42:18.078946 [debug] [MainThread]: On master: COMMIT
+[0m09:42:18.078946 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:42:18.078946 [debug] [MainThread]: Connection 'list_iceberg' was properly closed.
+[0m09:42:18.078946 [debug] [MainThread]: Connection 'list_iceberg_sunhouse' was properly closed.
+[0m09:42:18.078946 [debug] [MainThread]: Connection 'model.sunhouse_dbt.gold_booking' was properly closed.
+[0m09:42:18.078946 [info ] [MainThread]: 
+[0m09:42:18.078946 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 5.67 seconds (5.67s).
+[0m09:42:18.091489 [debug] [MainThread]: Command end result
+[0m09:42:18.117821 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m09:42:18.130011 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m09:42:18.132729 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m09:42:18.134730 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\run_results.json
+[0m09:42:18.134730 [info ] [MainThread]: 
+[0m09:42:18.134730 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:42:18.134730 [info ] [MainThread]: 
+[0m09:42:18.134730 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m09:42:18.134730 [debug] [MainThread]: Command `dbt run` succeeded at 09:42:18.134730 after 8.21 seconds
+[0m09:42:18.134730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBBE46FA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC6686750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC66B54D0>]}
+[0m09:42:18.134730 [debug] [MainThread]: Flushing usage events
+[0m09:42:19.141461 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:48:53.477063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA70E4B790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA70E4A990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA70DF7810>]}
+
+
+============================== 09:48:53.503141 | 120c70d0-9d61-4718-960f-23ba4d70322b ==============================
+[0m09:48:53.503141 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m09:48:53.505146 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\DE21\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --select gold_booking', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DE21\\Desktop\\DE-FINAL-PROJECT\\sunhouse_dbt\\logs'}
+[0m09:48:53.795839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA70F64E50>]}
+[0m09:48:53.909051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA6C1B6C10>]}
+[0m09:48:53.909051 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m09:48:54.358324 [debug] [MainThread]: checksum: 2f9eaaaab82deb131a4cd1ce538265daf51f0dc525c4f377bb019f1fe63144fc, vars: {}, profile: sunhouse_dbt, target: dev, version: 1.12.0b3
+[0m09:48:55.605487 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:48:55.605487 [debug] [MainThread]: Partial parsing: updated file: sunhouse_dbt://models\gold\gold_booking.sql
+[0m09:48:55.910660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA714CD910>]}
+[0m09:48:56.000540 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m09:48:56.016330 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m09:48:56.032113 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m09:48:56.064080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA7160F810>]}
+[0m09:48:56.064080 [info ] [MainThread]: Found 12 models, 7 sources, 505 macros
+[0m09:48:56.064080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA714D53D0>]}
+[0m09:48:56.064080 [info ] [MainThread]: 
+[0m09:48:56.064080 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:48:56.064080 [info ] [MainThread]: 
+[0m09:48:56.064080 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m09:48:56.064080 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m09:48:58.843269 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m09:48:58.843269 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m09:48:58.843269 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:48:58.843269 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m09:48:58.858964 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA718A37D0>]}
+[0m09:48:59.392132 [debug] [ThreadPool]: SQL status: SUCCESS in 0.535 seconds
+[0m09:48:59.392132 [debug] [ThreadPool]: On list_iceberg: Close
+[0m09:48:59.392132 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_sunhouse'
+[0m09:48:59.408038 [debug] [ThreadPool]: Using trino connection "list_iceberg_sunhouse"
+[0m09:48:59.408038 [debug] [ThreadPool]: On list_iceberg_sunhouse: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg_sunhouse"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'sunhouse') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'sunhouse'
+[0m09:48:59.408038 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:48:59.927908 [debug] [ThreadPool]: SQL status: SUCCESS in 0.518 seconds
+[0m09:48:59.927908 [debug] [ThreadPool]: On list_iceberg_sunhouse: ROLLBACK
+[0m09:48:59.927908 [debug] [ThreadPool]: On list_iceberg_sunhouse: Close
+[0m09:48:59.927908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA7162F750>]}
+[0m09:48:59.927908 [debug] [MainThread]: On master: COMMIT
+[0m09:48:59.943711 [debug] [Thread-1 (]: Began running node model.sunhouse_dbt.gold_booking
+[0m09:48:59.943711 [info ] [Thread-1 (]: 1 of 1 START sql incremental model iceberg.sunhouse.gold_booking ............... [RUN]
+[0m09:48:59.943711 [debug] [Thread-1 (]: Acquiring new trino connection 'model.sunhouse_dbt.gold_booking'
+[0m09:48:59.959461 [debug] [Thread-1 (]: Began compiling node model.sunhouse_dbt.gold_booking
+[0m09:48:59.959461 [debug] [Thread-1 (]: Writing injected SQL for node "model.sunhouse_dbt.gold_booking"
+[0m09:48:59.959461 [debug] [Thread-1 (]: Began executing node model.sunhouse_dbt.gold_booking
+[0m09:49:00.023013 [debug] [Thread-1 (]: Writing runtime sql for node "model.sunhouse_dbt.gold_booking"
+[0m09:49:00.029018 [debug] [Thread-1 (]: Using trino connection "model.sunhouse_dbt.gold_booking"
+[0m09:49:00.030006 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "node_id": "model.sunhouse_dbt.gold_booking"} */
+
+  
+    
+
+    create table "iceberg"."sunhouse"."gold_booking"
+      
+      WITH (location = 'abfs://warehouse@dataengineering2025sa.dfs.core.windows.net/SunHouse/Gold/bookings/')
+    as (
+      
+
+WITH booking AS (
+
+    SELECT *
+    FROM "iceberg"."sunhouse"."silver_flight_booking"
+
+),
+
+checkin AS (
+
+    SELECT
+        CAST(booking_id AS INTEGER) AS booking_id,
+        check_in_date
+    FROM "iceberg"."sunhouse"."silver_check_in"
+    GROUP BY booking_id, check_in_date
+
+),
+
+rates AS (
+
+    SELECT
+        change_date,
+        currency_type,
+        coin_value
+    FROM "iceberg"."sunhouse"."silver_coin_change"
+
+),
+
+payments AS (
+
+    SELECT
+        booking_id,
+        COUNT(*) AS num_of_payments
+    FROM "iceberg"."sunhouse"."silver_payments"
+    GROUP BY booking_id
+
+)
+
+SELECT
+
+    b.booking_id,
+    b.user_id,
+    b.flight_id,
+    b.passenger_count,
+    b.currency_type as original_currency_type,
+
+    b.booking_date,
+
+    c.check_in_date,
+
+    ROUND(
+        b.price * COALESCE(r.coin_value,1),
+        2
+    ) AS flight_price_ils,
+
+    COALESCE(p.num_of_payments,0) AS num_of_payments,
+
+    date_diff(
+        'minute',
+        c.check_in_date,
+        f.departure_date
+    ) AS checkin_to_departure_minutes,
+
+    date_diff(
+        'hour',
+        b.booking_date,
+        c.check_in_date
+    ) AS from_booking_to_check_in_hours,
+
+    f.destination_airport as destination
+
+FROM booking b
+
+LEFT JOIN checkin c
+    ON b.booking_id = c.booking_id
+
+LEFT JOIN rates r
+    ON r.currency_type = b.currency_type
+   AND r.change_date = CAST(b.booking_date AS DATE)
+
+LEFT JOIN payments p
+    ON p.booking_id = b.booking_id
+
+LEFT JOIN "iceberg"."sunhouse"."gold_flights" f
+    ON b.flight_id = f.flight_id
+
+
+    )
+[0m09:49:00.030006 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:49:01.431262 [debug] [Thread-1 (]: SQL status: CREATE TABLE (784 rows) in 1.413 seconds
+[0m09:49:01.446940 [debug] [Thread-1 (]: Applying DROP to: "iceberg"."sunhouse"."gold_booking__dbt_tmp"
+[0m09:49:01.446940 [debug] [Thread-1 (]: Using trino connection "model.sunhouse_dbt.gold_booking"
+[0m09:49:01.446940 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "node_id": "model.sunhouse_dbt.gold_booking"} */
+
+    drop view if exists "iceberg"."sunhouse"."gold_booking__dbt_tmp"
+[0m09:49:01.852504 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.413 seconds
+[0m09:49:01.868396 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: ROLLBACK
+[0m09:49:01.868396 [debug] [Thread-1 (]: On model.sunhouse_dbt.gold_booking: Close
+[0m09:49:01.868396 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '120c70d0-9d61-4718-960f-23ba4d70322b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA71C321D0>]}
+[0m09:49:01.868396 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model iceberg.sunhouse.gold_booking .......... [[32mCREATE TABLE (784 rows)[0m in 1.92s]
+[0m09:49:01.868396 [debug] [Thread-1 (]: Finished running node model.sunhouse_dbt.gold_booking
+[0m09:49:01.884518 [debug] [MainThread]: On master: COMMIT
+[0m09:49:01.884518 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:49:01.884518 [debug] [MainThread]: Connection 'list_iceberg' was properly closed.
+[0m09:49:01.884518 [debug] [MainThread]: Connection 'list_iceberg_sunhouse' was properly closed.
+[0m09:49:01.884518 [debug] [MainThread]: Connection 'model.sunhouse_dbt.gold_booking' was properly closed.
+[0m09:49:01.884518 [info ] [MainThread]: 
+[0m09:49:01.884518 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 5.82 seconds (5.82s).
+[0m09:49:01.884518 [debug] [MainThread]: Command end result
+[0m09:49:01.921511 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m09:49:01.924652 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m09:49:01.926652 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m09:49:01.928869 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\run_results.json
+[0m09:49:01.928869 [info ] [MainThread]: 
+[0m09:49:01.935535 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:49:01.936544 [info ] [MainThread]: 
+[0m09:49:01.936544 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m09:49:01.938085 [debug] [MainThread]: Command `dbt run` succeeded at 09:49:01.938085 after 8.59 seconds
+[0m09:49:01.938085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA68BFFA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA6F7AB890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA6F7ABF50>]}
+[0m09:49:01.938085 [debug] [MainThread]: Flushing usage events
+[0m09:49:03.077426 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:16:46.659085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001252964FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012529647590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012529647190>]}
+
+
+============================== 10:16:46.674273 | e8ca775c-7f02-41f1-babc-4bfbf4db38b4 ==============================
+[0m10:16:46.674273 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m10:16:46.674273 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\DE21\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --select silver_flight_schedule', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DE21\\Desktop\\DE-FINAL-PROJECT\\sunhouse_dbt\\logs'}
+[0m10:16:46.964914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e8ca775c-7f02-41f1-babc-4bfbf4db38b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125267E9E10>]}
+[0m10:16:47.074669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e8ca775c-7f02-41f1-babc-4bfbf4db38b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125249F6550>]}
+[0m10:16:47.074669 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m10:16:47.515282 [debug] [MainThread]: checksum: 2f9eaaaab82deb131a4cd1ce538265daf51f0dc525c4f377bb019f1fe63144fc, vars: {}, profile: sunhouse_dbt, target: dev, version: 1.12.0b3
+[0m10:16:48.771017 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:16:48.771017 [debug] [MainThread]: Partial parsing: updated file: sunhouse_dbt://models\silver\silver_flight_schedule.sql
+[0m10:16:49.096758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e8ca775c-7f02-41f1-babc-4bfbf4db38b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125298A2A10>]}
+[0m10:16:49.163303 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m10:16:49.179022 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m10:16:49.210678 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m10:16:49.226578 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Compilation Error
+  Found a cycle: model.sunhouse_dbt.silver_flight_schedule
+[0m10:16:49.226578 [debug] [MainThread]: Command `dbt run` failed at 10:16:49.226578 after 2.72 seconds
+[0m10:16:49.226578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125297B6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125297B72D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001252964FA10>]}
+[0m10:16:49.226578 [debug] [MainThread]: Flushing usage events
+[0m10:16:50.246551 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:18:03.057028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E72ACD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E6D7AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E6D77D0>]}
+
+
+============================== 10:18:03.068388 | f9008bf0-2e23-4716-a066-e574d371ac3c ==============================
+[0m10:18:03.068388 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m10:18:03.068388 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\DE21\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run --select silver_flight_schedule', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DE21\\Desktop\\DE-FINAL-PROJECT\\sunhouse_dbt\\logs'}
+[0m10:18:03.292442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E7A8E50>]}
+[0m10:18:03.402785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E982E50>]}
+[0m10:18:03.402785 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m10:18:03.762918 [debug] [MainThread]: checksum: 2f9eaaaab82deb131a4cd1ce538265daf51f0dc525c4f377bb019f1fe63144fc, vars: {}, profile: sunhouse_dbt, target: dev, version: 1.12.0b3
+[0m10:18:03.902686 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:18:03.902686 [debug] [MainThread]: Partial parsing: updated file: sunhouse_dbt://models\silver\silver_flight_schedule.sql
+[0m10:18:04.238477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28F146BD0>]}
+[0m10:18:04.315411 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m10:18:04.318405 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m10:18:04.342532 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m10:18:04.358250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28EFEB450>]}
+[0m10:18:04.358250 [info ] [MainThread]: Found 12 models, 7 sources, 505 macros
+[0m10:18:04.358250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28F1FE490>]}
+[0m10:18:04.358250 [info ] [MainThread]: 
+[0m10:18:04.358250 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:18:04.358250 [info ] [MainThread]: 
+[0m10:18:04.358250 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m10:18:04.358250 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m10:18:06.977008 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m10:18:06.977008 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m10:18:06.977008 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:18:06.977008 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m10:18:06.977008 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28F2FCD50>]}
+[0m10:18:07.502472 [debug] [ThreadPool]: SQL status: SUCCESS in 0.523 seconds
+[0m10:18:07.503922 [debug] [ThreadPool]: On list_iceberg: Close
+[0m10:18:07.508925 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_sunhouse'
+[0m10:18:07.510930 [debug] [ThreadPool]: Using trino connection "list_iceberg_sunhouse"
+[0m10:18:07.510930 [debug] [ThreadPool]: On list_iceberg_sunhouse: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg_sunhouse"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'sunhouse') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'sunhouse'
+[0m10:18:07.510930 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:18:08.042051 [debug] [ThreadPool]: SQL status: SUCCESS in 0.520 seconds
+[0m10:18:08.042051 [debug] [ThreadPool]: On list_iceberg_sunhouse: ROLLBACK
+[0m10:18:08.042051 [debug] [ThreadPool]: On list_iceberg_sunhouse: Close
+[0m10:18:08.042051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28F1BC190>]}
+[0m10:18:08.042051 [debug] [MainThread]: On master: COMMIT
+[0m10:18:08.057727 [debug] [Thread-1 (]: Began running node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:08.057727 [info ] [Thread-1 (]: 1 of 1 START sql incremental model iceberg.sunhouse.silver_flight_schedule ..... [RUN]
+[0m10:18:08.057727 [debug] [Thread-1 (]: Acquiring new trino connection 'model.sunhouse_dbt.silver_flight_schedule'
+[0m10:18:08.057727 [debug] [Thread-1 (]: Began compiling node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:08.073498 [debug] [Thread-1 (]: Writing injected SQL for node "model.sunhouse_dbt.silver_flight_schedule"
+[0m10:18:08.073498 [debug] [Thread-1 (]: Began executing node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:08.132665 [debug] [Thread-1 (]: Writing runtime sql for node "model.sunhouse_dbt.silver_flight_schedule"
+[0m10:18:08.143700 [debug] [Thread-1 (]: Using trino connection "model.sunhouse_dbt.silver_flight_schedule"
+[0m10:18:08.143700 [debug] [Thread-1 (]: On model.sunhouse_dbt.silver_flight_schedule: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "node_id": "model.sunhouse_dbt.silver_flight_schedule"} */
+
+  
+    
+
+    create table "iceberg"."sunhouse"."silver_flight_schedule"
+      
+      WITH (location = 'abfs://warehouse@dataengineering2025sa.dfs.core.windows.net/SunHouse/Silver/flight-schedule/')
+    as (
+      
+
+WITH raw_extracted AS (
+    SELECT
+        flightnumber,
+        TRIM(departuredate) AS raw_date,
+        TRIM(departuretime) AS raw_time,
+        departure,
+        destination,
+        airline
+    FROM "hive"."sunhouse"."raw_flight_schedule"
+    WHERE flightnumber IS NOT NULL 
+      AND departuredate IS NOT NULL
+),
+
+standardized_datetime AS (
+    SELECT
+        CASE
+            -- DD/MM/YYYY (or DD/MM/YYYY HH:mm)
+            WHEN raw_date LIKE '%/%' THEN
+                CAST(
+                    DATE_PARSE(
+                        CONCAT(
+                            SPLIT(raw_date, ' ')[1],
+                            ' ',
+                            CASE
+                                WHEN TRY(DATE_PARSE(raw_time, '%H:%i')) IS NOT NULL
+                                    THEN raw_time
+                                ELSE '00:00'
+                            END
+                        ),
+                        '%d/%m/%Y %H:%i'
+                    ) AS TIMESTAMP(3)
+                )
+
+            -- YYYY-MM-DD (or YYYY-MM-DD HH:mm:ss)
+            ELSE
+                CAST(
+                    DATE_PARSE(
+                        CONCAT(
+                            SPLIT(raw_date, ' ')[1],
+                            ' ',
+                            CASE
+                                WHEN TRY(DATE_PARSE(raw_time, '%H:%i')) IS NOT NULL
+                                    THEN raw_time
+                                ELSE '00:00'
+                            END
+                        ),
+                        '%Y-%m-%d %H:%i'
+                    ) AS TIMESTAMP(3)
+                )
+        END AS full_departure_timestamp,
+
+        flightnumber,
+        departure,
+        destination,
+        airline
+    FROM raw_extracted
+),
+
+clean_bronze AS (
+    SELECT
+        UPPER(REGEXP_REPLACE(TRIM(flightnumber), '[^a-zA-Z0-9]')) AS clean_flight_number,
+        
+        -- 2. Extract a clean string date (YYYY-MM-DD) for macro ID consistency
+        CAST(CAST(full_departure_timestamp AS DATE) AS VARCHAR) AS clean_departure_date,
+        
+        full_departure_timestamp,
+        COALESCE(UPPER(TRIM(departure)), 'UNKNOWN') AS departure_airport,
+        COALESCE(UPPER(TRIM(destination)), 'UNKNOWN') AS destination_airport,
+        COALESCE(UPPER(TRIM(airline)), 'UNKNOWN') AS airline_name
+    FROM standardized_datetime
+),
+
+surrogate_key_generation AS (
+    SELECT
+        -- 3. Run macro with the pristine YYYY-MM-DD string format
+        
+    LOWER(
+        TO_HEX(
+            MD5(
+                CAST(
+                    CONCAT(
+                        UPPER(REGEXP_REPLACE(TRIM(clean_flight_number), '[^a-zA-Z0-9]')),
+                        '_',
+                        TRIM(clean_departure_date)
+                    ) AS VARBINARY
+                )
+            )
+        )
+    )
+ AS flight_id,
+        clean_flight_number AS flight_number,
+        departure_airport,
+        destination_airport,
+        airline_name,
+        full_departure_timestamp AS departure_date
+    FROM clean_bronze
+),
+
+full_destination as (
+    SELECT 
+        s.flight_id,
+        s.departure_airport,
+        CASE
+            WHEN s.destination_airport = 'UNKOWN' THEN b.destination
+            ELSE s.destination_airport
+        END AS destination_airport,
+        s.airline_name,
+        s.full_departure_timestamp AS departure_date
+    FROM surrogate_key_generation s
+    LEFT JOIN "iceberg"."sunhouse"."silver_flight_booking" b
+    ON s.flight_id = b.flight_id
+)
+
+SELECT DISTINCT * 
+FROM full_destination
+    )
+[0m10:18:08.144698 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:18:08.452754 [debug] [Thread-1 (]: Trino adapter: Trino query id: 20260702_071808_07603_enk7t
+[0m10:18:08.452754 [debug] [Thread-1 (]: Trino adapter: Trino error: TrinoUserError(type=USER_ERROR, name=COLUMN_NOT_FOUND, message="line 119:9: Column 's.full_departure_timestamp' cannot be resolved", query_id=20260702_071808_07603_enk7t)
+[0m10:18:08.452754 [debug] [Thread-1 (]: On model.sunhouse_dbt.silver_flight_schedule: ROLLBACK
+[0m10:18:08.452754 [debug] [Thread-1 (]: On model.sunhouse_dbt.silver_flight_schedule: Close
+[0m10:18:08.592530 [debug] [Thread-1 (]: Database Error in model silver_flight_schedule (models\silver\silver_flight_schedule.sql)
+  TrinoUserError(type=USER_ERROR, name=COLUMN_NOT_FOUND, message="line 119:9: Column 's.full_departure_timestamp' cannot be resolved", query_id=20260702_071808_07603_enk7t)
+  compiled code at target\run\sunhouse_dbt\models\silver\silver_flight_schedule.sql
+[0m10:18:08.592530 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f9008bf0-2e23-4716-a066-e574d371ac3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28F07E510>]}
+[0m10:18:08.592530 [error] [Thread-1 (]: 1 of 1 ERROR creating sql incremental model iceberg.sunhouse.silver_flight_schedule  [[31mERROR[0m in 0.53s]
+[0m10:18:08.592530 [debug] [Thread-1 (]: Finished running node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:08.592530 [debug] [Thread-4 (]: Marking all children of 'model.sunhouse_dbt.silver_flight_schedule' to be skipped because of status 'error'.  Reason: Database Error in model silver_flight_schedule (models\silver\silver_flight_schedule.sql)
+  TrinoUserError(type=USER_ERROR, name=COLUMN_NOT_FOUND, message="line 119:9: Column 's.full_departure_timestamp' cannot be resolved", query_id=20260702_071808_07603_enk7t)
+  compiled code at target\run\sunhouse_dbt\models\silver\silver_flight_schedule.sql.
+[0m10:18:08.598443 [debug] [MainThread]: On master: COMMIT
+[0m10:18:08.598443 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:18:08.598443 [debug] [MainThread]: Connection 'list_iceberg' was properly closed.
+[0m10:18:08.598443 [debug] [MainThread]: Connection 'list_iceberg_sunhouse' was properly closed.
+[0m10:18:08.598443 [debug] [MainThread]: Connection 'model.sunhouse_dbt.silver_flight_schedule' was properly closed.
+[0m10:18:08.598443 [info ] [MainThread]: 
+[0m10:18:08.598443 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 4.24 seconds (4.24s).
+[0m10:18:08.598443 [debug] [MainThread]: Command end result
+[0m10:18:08.632707 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m10:18:08.632707 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m10:18:08.643230 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m10:18:08.645620 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\run_results.json
+[0m10:18:08.645620 [info ] [MainThread]: 
+[0m10:18:08.645620 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:18:08.645620 [info ] [MainThread]: 
+[0m10:18:08.645620 [error] [MainThread]: [[31mERROR[0m]: in model silver_flight_schedule (models\silver\silver_flight_schedule.sql)
+[0m10:18:08.645620 [error] [MainThread]:   Database Error in model silver_flight_schedule (models\silver\silver_flight_schedule.sql)
+  TrinoUserError(type=USER_ERROR, name=COLUMN_NOT_FOUND, message="line 119:9: Column 's.full_departure_timestamp' cannot be resolved", query_id=20260702_071808_07603_enk7t)
+  compiled code at target\run\sunhouse_dbt\models\silver\silver_flight_schedule.sql
+[0m10:18:08.645620 [info ] [MainThread]: 
+[0m10:18:08.645620 [info ] [MainThread]:   compiled code at target\compiled\sunhouse_dbt\models\silver\silver_flight_schedule.sql
+[0m10:18:08.645620 [info ] [MainThread]: 
+[0m10:18:08.645620 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m10:18:08.645620 [debug] [MainThread]: Command `dbt run` failed at 10:18:08.645620 after 5.71 seconds
+[0m10:18:08.645620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E8679D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E867890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F28E6DC310>]}
+[0m10:18:08.645620 [debug] [MainThread]: Flushing usage events
+[0m10:18:09.689954 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:18:54.360426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6A7F310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6ACA990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6A7DA10>]}
+
+
+============================== 10:18:54.360426 | aeeff542-a78e-43e9-b2fd-8fbd28180509 ==============================
+[0m10:18:54.360426 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m10:18:54.360426 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\DE21\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --select silver_flight_schedule', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DE21\\Desktop\\DE-FINAL-PROJECT\\sunhouse_dbt\\logs'}
+[0m10:18:54.591311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6A75F10>]}
+[0m10:18:54.702087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C1E36890>]}
+[0m10:18:54.702087 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m10:18:55.055825 [debug] [MainThread]: checksum: 2f9eaaaab82deb131a4cd1ce538265daf51f0dc525c4f377bb019f1fe63144fc, vars: {}, profile: sunhouse_dbt, target: dev, version: 1.12.0b3
+[0m10:18:55.187471 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:18:55.187471 [debug] [MainThread]: Partial parsing: updated file: sunhouse_dbt://models\silver\silver_flight_schedule.sql
+[0m10:18:55.487571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6D20550>]}
+[0m10:18:55.573673 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m10:18:55.576678 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m10:18:55.592542 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m10:18:55.608358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C73D66D0>]}
+[0m10:18:55.608358 [info ] [MainThread]: Found 12 models, 7 sources, 505 macros
+[0m10:18:55.608358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6EC1B90>]}
+[0m10:18:55.608358 [info ] [MainThread]: 
+[0m10:18:55.608358 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:18:55.608358 [info ] [MainThread]: 
+[0m10:18:55.608358 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m10:18:55.624476 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m10:18:55.713581 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m10:18:55.714551 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m10:18:55.714551 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:18:55.714551 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m10:18:55.715556 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C753C6D0>]}
+[0m10:18:56.252604 [debug] [ThreadPool]: SQL status: SUCCESS in 0.539 seconds
+[0m10:18:56.254610 [debug] [ThreadPool]: On list_iceberg: Close
+[0m10:18:56.254610 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_sunhouse'
+[0m10:18:56.268444 [debug] [ThreadPool]: Using trino connection "list_iceberg_sunhouse"
+[0m10:18:56.268444 [debug] [ThreadPool]: On list_iceberg_sunhouse: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "connection_name": "list_iceberg_sunhouse"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'sunhouse') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'sunhouse'
+[0m10:18:56.268444 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:18:56.786724 [debug] [ThreadPool]: SQL status: SUCCESS in 0.515 seconds
+[0m10:18:56.790164 [debug] [ThreadPool]: On list_iceberg_sunhouse: ROLLBACK
+[0m10:18:56.790164 [debug] [ThreadPool]: On list_iceberg_sunhouse: Close
+[0m10:18:56.792170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C7413F90>]}
+[0m10:18:56.792170 [debug] [MainThread]: On master: COMMIT
+[0m10:18:56.792170 [debug] [Thread-1 (]: Began running node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:56.792170 [info ] [Thread-1 (]: 1 of 1 START sql incremental model iceberg.sunhouse.silver_flight_schedule ..... [RUN]
+[0m10:18:56.792170 [debug] [Thread-1 (]: Acquiring new trino connection 'model.sunhouse_dbt.silver_flight_schedule'
+[0m10:18:56.792170 [debug] [Thread-1 (]: Began compiling node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:56.802601 [debug] [Thread-1 (]: Writing injected SQL for node "model.sunhouse_dbt.silver_flight_schedule"
+[0m10:18:56.802601 [debug] [Thread-1 (]: Began executing node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:56.867345 [debug] [Thread-1 (]: Writing runtime sql for node "model.sunhouse_dbt.silver_flight_schedule"
+[0m10:18:56.878345 [debug] [Thread-1 (]: Using trino connection "model.sunhouse_dbt.silver_flight_schedule"
+[0m10:18:56.878345 [debug] [Thread-1 (]: On model.sunhouse_dbt.silver_flight_schedule: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "node_id": "model.sunhouse_dbt.silver_flight_schedule"} */
+
+  
+    
+
+    create table "iceberg"."sunhouse"."silver_flight_schedule"
+      
+      WITH (location = 'abfs://warehouse@dataengineering2025sa.dfs.core.windows.net/SunHouse/Silver/flight-schedule/')
+    as (
+      
+
+WITH raw_extracted AS (
+    SELECT
+        flightnumber,
+        TRIM(departuredate) AS raw_date,
+        TRIM(departuretime) AS raw_time,
+        departure,
+        destination,
+        airline
+    FROM "hive"."sunhouse"."raw_flight_schedule"
+    WHERE flightnumber IS NOT NULL 
+      AND departuredate IS NOT NULL
+),
+
+standardized_datetime AS (
+    SELECT
+        CASE
+            -- DD/MM/YYYY (or DD/MM/YYYY HH:mm)
+            WHEN raw_date LIKE '%/%' THEN
+                CAST(
+                    DATE_PARSE(
+                        CONCAT(
+                            SPLIT(raw_date, ' ')[1],
+                            ' ',
+                            CASE
+                                WHEN TRY(DATE_PARSE(raw_time, '%H:%i')) IS NOT NULL
+                                    THEN raw_time
+                                ELSE '00:00'
+                            END
+                        ),
+                        '%d/%m/%Y %H:%i'
+                    ) AS TIMESTAMP(3)
+                )
+
+            -- YYYY-MM-DD (or YYYY-MM-DD HH:mm:ss)
+            ELSE
+                CAST(
+                    DATE_PARSE(
+                        CONCAT(
+                            SPLIT(raw_date, ' ')[1],
+                            ' ',
+                            CASE
+                                WHEN TRY(DATE_PARSE(raw_time, '%H:%i')) IS NOT NULL
+                                    THEN raw_time
+                                ELSE '00:00'
+                            END
+                        ),
+                        '%Y-%m-%d %H:%i'
+                    ) AS TIMESTAMP(3)
+                )
+        END AS full_departure_timestamp,
+
+        flightnumber,
+        departure,
+        destination,
+        airline
+    FROM raw_extracted
+),
+
+clean_bronze AS (
+    SELECT
+        UPPER(REGEXP_REPLACE(TRIM(flightnumber), '[^a-zA-Z0-9]')) AS clean_flight_number,
+        
+        -- 2. Extract a clean string date (YYYY-MM-DD) for macro ID consistency
+        CAST(CAST(full_departure_timestamp AS DATE) AS VARCHAR) AS clean_departure_date,
+        
+        full_departure_timestamp,
+        COALESCE(UPPER(TRIM(departure)), 'UNKNOWN') AS departure_airport,
+        COALESCE(UPPER(TRIM(destination)), 'UNKNOWN') AS destination_airport,
+        COALESCE(UPPER(TRIM(airline)), 'UNKNOWN') AS airline_name
+    FROM standardized_datetime
+),
+
+surrogate_key_generation AS (
+    SELECT
+        -- 3. Run macro with the pristine YYYY-MM-DD string format
+        
+    LOWER(
+        TO_HEX(
+            MD5(
+                CAST(
+                    CONCAT(
+                        UPPER(REGEXP_REPLACE(TRIM(clean_flight_number), '[^a-zA-Z0-9]')),
+                        '_',
+                        TRIM(clean_departure_date)
+                    ) AS VARBINARY
+                )
+            )
+        )
+    )
+ AS flight_id,
+        clean_flight_number AS flight_number,
+        departure_airport,
+        destination_airport,
+        airline_name,
+        full_departure_timestamp AS departure_date
+    FROM clean_bronze
+),
+
+full_destination as (
+    SELECT 
+        s.flight_id,
+        s.departure_airport,
+        CASE
+            WHEN s.destination_airport = 'UNKOWN' THEN b.destination
+            ELSE s.destination_airport
+        END AS destination_airport,
+        s.airline_name,
+        s.departure_date
+    FROM surrogate_key_generation s
+    LEFT JOIN "iceberg"."sunhouse"."silver_flight_booking" b
+    ON s.flight_id = b.flight_id
+)
+
+SELECT DISTINCT * 
+FROM full_destination
+    )
+[0m10:18:56.878345 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:18:58.047454 [debug] [Thread-1 (]: SQL status: CREATE TABLE (2_188 rows) in 1.170 seconds
+[0m10:18:58.047454 [debug] [Thread-1 (]: Applying DROP to: "iceberg"."sunhouse"."silver_flight_schedule__dbt_tmp"
+[0m10:18:58.047454 [debug] [Thread-1 (]: Using trino connection "model.sunhouse_dbt.silver_flight_schedule"
+[0m10:18:58.047454 [debug] [Thread-1 (]: On model.sunhouse_dbt.silver_flight_schedule: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "sunhouse_dbt", "target_name": "dev", "node_id": "model.sunhouse_dbt.silver_flight_schedule"} */
+
+    drop view if exists "iceberg"."sunhouse"."silver_flight_schedule__dbt_tmp"
+[0m10:18:58.473713 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.414 seconds
+[0m10:18:58.485263 [debug] [Thread-1 (]: On model.sunhouse_dbt.silver_flight_schedule: ROLLBACK
+[0m10:18:58.485263 [debug] [Thread-1 (]: On model.sunhouse_dbt.silver_flight_schedule: Close
+[0m10:18:58.485263 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'aeeff542-a78e-43e9-b2fd-8fbd28180509', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C7414D90>]}
+[0m10:18:58.485263 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model iceberg.sunhouse.silver_flight_schedule  [[32mCREATE TABLE (2_188 rows)[0m in 1.69s]
+[0m10:18:58.485263 [debug] [Thread-1 (]: Finished running node model.sunhouse_dbt.silver_flight_schedule
+[0m10:18:58.485263 [debug] [MainThread]: On master: COMMIT
+[0m10:18:58.485263 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:18:58.485263 [debug] [MainThread]: Connection 'list_iceberg' was properly closed.
+[0m10:18:58.485263 [debug] [MainThread]: Connection 'list_iceberg_sunhouse' was properly closed.
+[0m10:18:58.485263 [debug] [MainThread]: Connection 'model.sunhouse_dbt.silver_flight_schedule' was properly closed.
+[0m10:18:58.485263 [info ] [MainThread]: 
+[0m10:18:58.485263 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 2.88 seconds (2.88s).
+[0m10:18:58.485263 [debug] [MainThread]: Command end result
+[0m10:18:58.528717 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\manifest.json
+[0m10:18:58.528717 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\semantic_manifest.json
+[0m10:18:58.528717 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\osi_document.json
+[0m10:18:58.541018 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DE21\Desktop\DE-FINAL-PROJECT\sunhouse_dbt\target\run_results.json
+[0m10:18:58.541018 [info ] [MainThread]: 
+[0m10:18:58.543928 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:18:58.544937 [info ] [MainThread]: 
+[0m10:18:58.544937 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m10:18:58.545970 [debug] [MainThread]: Command `dbt run` succeeded at 10:18:58.545970 after 4.29 seconds
+[0m10:18:58.546966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217BE80F950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6A83F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217C6A95410>]}
+[0m10:18:58.546966 [debug] [MainThread]: Flushing usage events
+[0m10:18:59.534377 [debug] [MainThread]: An error was encountered while trying to flush usage events
